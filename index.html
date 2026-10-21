@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recherche Email EDU - ISTA Souk Sebt</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #08a9d6, #00b98b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container { width: 100%; max-width: 600px; }
+    .school {
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 28px;
+      padding: 38px 30px;
+      box-shadow: 0 15px 40px #005c5830;
+    }
+    h1 { text-align: center; font-size: 30px; color: #17212b; }
+    .description {
+      text-align: center;
+      color: #697780;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+    label { display: block; font-weight: bold; margin-bottom: 10px; }
+    input {
+      width: 100%;
+      padding: 17px;
+      border: 1px solid #ccd9df;
+      border-radius: 13px;
+      font-size: 17px;
+    }
+    button {
+      width: 100%;
+      padding: 17px;
+      margin-top: 22px;
+      border: 0;
+      border-radius: 13px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #08a9d6, #00b98b);
+      cursor: pointer;
+    }
+    .notice {
+      margin-top: 20px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #697780;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="school">OFPPT / ISTA SOUK SEBT 2026-2027</div>
+    <section class="card">
+      <h1>Recherche Email EDU</h1>
+      <p class="description">
+        Retrouvez votre adresse e-mail éducative en toute sécurité.
+      </p>
+
+      <form id="searchForm">
+        <label for="cin">Numéro CIN</label>
+        <input id="cin" type="text" placeholder="Entrez votre numéro CIN" required>
+        <button type="submit">⌕ &nbsp; Rechercher</button>
+      </form>
+
+      <p id="result" role="status"></p>
+
+      <p class="notice">
+        Service destiné aux stagiaires de l'ISTA Souk Sebt.
+        L'accès aux données personnelles doit être autorisé et sécurisé.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("result").textContent =
+        "Le service de recherche sera disponible après la connexion sécurisée à la base de données officielle.";
+    });
+  </script>
+</body>
+</html>
